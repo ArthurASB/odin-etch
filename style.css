@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    border: 1px solid black;
+}
+
+.gridbox {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px dashed blue;
+}
