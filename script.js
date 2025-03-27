@@ -7,9 +7,10 @@ function randomColor () {
     return rgbColor;
 }
 
-const container = document.querySelector(".container");
+function createGrid (num=50){
+    const container = document.querySelector(".container");
 
-let num = 50;
+// let num = 50;
 
 for (let i=0; i < num; i++){
     let rowBox = document.createElement("div");
@@ -22,6 +23,9 @@ for (let i=0; i < num; i++){
         rowBox.appendChild(columnBox);
     }
 }
+}
+
+createGrid();
 
 const hoverBoxes = document.querySelectorAll(".columnbox");
 
