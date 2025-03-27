@@ -9,7 +9,7 @@ function randomColor () {
 
 const container = document.querySelector(".container");
 
-let num = 100;
+let num = 50;
 
 for (let i=0; i < num; i++){
     let rowBox = document.createElement("div");
@@ -28,7 +28,8 @@ const hoverBoxes = document.querySelectorAll(".columnbox");
 hoverBoxes.forEach((box) => {
     box.addEventListener("mouseenter", () => {
         box.style["background-color"] = randomColor();
-        // box.style["oppacity"] = box.style["oppacity"] - 0.1;
+        let curOpacity = parseFloat(box.style.opacity) || 0;
+        box.style.opacity = Math.min(1, curOpacity + 0.1);
     });
 });
 
