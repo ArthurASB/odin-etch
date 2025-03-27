@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 
-let num = 10;
+let num = 100;
 
 for (let i=0; i < num; i++){
     let rowBox = document.createElement("div");
@@ -13,3 +13,11 @@ for (let i=0; i < num; i++){
         rowBox.appendChild(columnBox);
     }
 }
+
+const hoverBoxes = document.querySelectorAll(".columnbox");
+
+hoverBoxes.forEach((box) => {
+    box.addEventListener("mouseenter", () => {
+        box.style["background-color"] = "black";
+    });
+});
